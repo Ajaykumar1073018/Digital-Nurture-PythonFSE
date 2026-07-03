@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal</title>
+
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body>
+
+<header>
+    <h2>Student Portal</h2>
+
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Courses</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Grades</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="hero">
+    <h1>Welcome to the Student Portal</h1>
+    <p>Manage your courses and academic details.</p>
+    <button>Explore Courses</button>
+</section>
+
+<section id="courses">
+    <h2>Available Courses</h2>
+
+    <article class="course-card">
+        <h3>Data Structures</h3>
+        <p>Learn data organization techniques.</p>
+        <span>4 Credits</span>
+    </article>
+
+    <article class="course-card">
+        <h3>Web Development</h3>
+        <p>HTML, CSS and JavaScript concepts.</p>
+        <span>3 Credits</span>
+    </article>
+
+    <article class="course-card">
+        <h3>Machine Learning</h3>
+        <p>Introduction to AI and ML concepts.</p>
+        <span>4 Credits</span>
+    </article>
+
+</section>
+
+<footer>
+    <p>© 2026 Student Portal</p>
+</footer>
+
+</body>
+</html>
