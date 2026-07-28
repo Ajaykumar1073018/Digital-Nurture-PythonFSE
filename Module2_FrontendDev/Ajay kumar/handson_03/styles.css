@@ -1,0 +1,111 @@
+/* Accessibility Update: Verified all text colors meet the 4.5:1 WCAG AA contrast ratio. */
+/* CanIUse Check for 'gap' property: Supported in all modern browsers (Chrome 84+, Firefox 63+, Safari 14.1+). Not supported in IE11. */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  /* Dark text for high contrast against light background */
+  color: #222222; 
+}
+
+header {
+  background-color: #004080;
+  color: #ffffff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a[aria-current="page"] {
+  border-bottom: 2px solid #ffffff;
+}
+
+main {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#hero {
+  text-align: center;
+  padding: 3rem 1rem;
+  background-color: #ffffff;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+}
+
+#hero button {
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #0059b3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#courses label {
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+#search-courses {
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  max-width: 400px;
+  border: 1px solid #555;
+  border-radius: 4px;
+}
+
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.course-card {
+  background: #ffffff;
+  padding: 1.5rem;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  cursor: pointer;
+}
+
+/* Accessibility: Clear visible outline for keyboard users navigating via Tab */
+.course-card:focus, 
+.course-card:hover {
+  outline: 3px solid #0059b3;
+  outline-offset: 2px;
+  border-color: #0059b3;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #333333;
+  color: white;
+  margin-top: 2rem;
+}

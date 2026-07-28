@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Initial Lighthouse Accessibility Score: 100 -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Portal</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Student Portal</h1>
+    <!-- Accessibility: added aria-label -->
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="#" aria-current="page">Home</a></li>
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#profile">Profile</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="hero">
+      <h2>Welcome to the Student Portal</h2>
+      <p>Manage your courses and profile easily.</p>
+      <button>Explore Courses</button>
+    </section>
+
+    <section id="courses">
+      <h2>Available Courses</h2>
+      
+      <!-- Accessibility: added associated label for input -->
+      <label for="search-courses">Search Courses:</label>
+      <input type="text" id="search-courses" placeholder="Search courses...">
+      
+      <!-- Accessibility: screen reader announcement area -->
+      <p id="search-results-count" role="status" aria-live="polite"></p>
+
+      <div class="course-grid">
+        <!-- Courses will be injected here via JavaScript -->
+      </div>
+      <p id="total-credits"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Student Portal. All rights reserved.</p>
+  </footer>
+
+  <script type="module" src="app.js"></script>
+  
+  <!-- CSS Polyfill for Older Browsers (Cross-Browser Compatibility) -->
+  <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+  <script>
+    cssVars({ watch: true });
+  </script>
+</body>
+</html>
